@@ -22,6 +22,7 @@ public class Register {
        /*ask about this- why this doesn't work
         WebElement myElement_logIn = driver_fireFox.findElement(By.linkText("Login"));
         */
+
         WebElement myElement_login = driver_fireFox.findElement(By.xpath("//a[@href='/login']"));
         myElement_login.click();
         Thread.sleep(1000);
@@ -30,7 +31,7 @@ public class Register {
         WebElement myElement_email = driver_fireFox.findElement(By.id("customer.emailAddress"));
         myElement_email.sendKeys("m.raian1593@outlook.com");
         Thread.sleep(1000);
-
+/*
         WebElement myElement_firstName = driver_fireFox.findElement(By.id("customer.firstName"));
         myElement_firstName.sendKeys("Raian");
         Thread.sleep(1000);
@@ -52,7 +53,7 @@ public class Register {
         myElement_register.click();
         Thread.sleep(1000);
 
-
+*/
         driver_fireFox.quit();
 
 

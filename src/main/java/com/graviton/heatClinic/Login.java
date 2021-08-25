@@ -23,6 +23,8 @@ public class Login {
         System.out.println("print here1");
 
         WebElement myElement_email = driver.findElement(By.id("username"));
+        myElement_email.clear();
+        
         myElement_email.sendKeys("m.raian1593@outlook.com");
         Thread.sleep(5000);
         System.out.println("print here2");
@@ -42,7 +44,7 @@ public class Login {
         myElement_login.click();
         Thread.sleep(5000);
 
-        System.out.println("print here3");
+
         driver.quit();
 
 
