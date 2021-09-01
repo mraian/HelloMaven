@@ -79,7 +79,11 @@ public class ShoppingCart {
         state.selectByVisibleText("VA");
         Thread.sleep(1000);
 
-        driver.findElement(By.xpath("//*[@id=\"checkout\"]/div[2]/div/div[1]/div[2]/div[2]/a")).click();
+        //driver.findElement(By.xpath("//*[@id=\"checkout\"]/div[2]/div/div[1]/div[2]/div[2]/a")).click();
+        //driver.findElement(By.xpath("//input[@id='fulfillmentOptionId3']")).click();
+        driver.findElement(By.xpath("//label[normalize-space()='Standard (5 - 7 Days)']")).click();
+
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//a[@class='btn btn-primary pull-right js-submitCheckoutStage']")).click();
         Thread.sleep(1000);
 
@@ -93,9 +97,6 @@ public class ShoppingCart {
 
         String confirmationText = driver.findElement(By.xpath("//div[@class='card confirmation-card']")).getText();
         System.out.println("Shipping Text: " + confirmationText);
-
-
-
 
 
         driver.quit();
